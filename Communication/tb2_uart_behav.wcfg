@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb2_uart_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb2_uart" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="20.900000001 ms"></ZoomEndTime>
+      <Cursor1Time time="0.150000000 ms"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="256"></NameColumnWidth>
+      <ValueColumnWidth column_width="154"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/tb2_uart/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb2_uart/clk2" type="logic">
+      <obj_property name="ElementShortName">clk2</obj_property>
+      <obj_property name="ObjectShortName">clk2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb2_uart/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb2_uart/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb2_uart/j" type="array">
+      <obj_property name="ElementShortName">j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb2_uart/clk_freq" type="array">
+      <obj_property name="ElementShortName">clk_freq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_freq[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb2_uart/clk2_freq" type="array">
+      <obj_property name="ElementShortName">clk2_freq[31:0]</obj_property>
+      <obj_property name="ObjectShortName">clk2_freq[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb2_uart/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb2_uart/clk2_period" type="other">
+      <obj_property name="ElementShortName">clk2_period</obj_property>
+      <obj_property name="ObjectShortName">clk2_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb2_uart/baud_rate" type="array">
+      <obj_property name="ElementShortName">baud_rate[31:0]</obj_property>
+      <obj_property name="ObjectShortName">baud_rate[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group74" type="group">
+      <obj_property name="label">DUT1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb2_uart/dut1/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut1/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut1/rx" type="logic">
+         <obj_property name="ElementShortName">rx</obj_property>
+         <obj_property name="ObjectShortName">rx</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut1/tx" type="logic">
+         <obj_property name="ElementShortName">tx</obj_property>
+         <obj_property name="ObjectShortName">tx</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut1/newd" type="logic">
+         <obj_property name="ElementShortName">newd</obj_property>
+         <obj_property name="ObjectShortName">newd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut1/tx_data" type="array">
+         <obj_property name="ElementShortName">tx_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut1/done_tx" type="logic">
+         <obj_property name="ElementShortName">done_tx</obj_property>
+         <obj_property name="ObjectShortName">done_tx</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut1/donerx" type="logic">
+         <obj_property name="ElementShortName">donerx</obj_property>
+         <obj_property name="ObjectShortName">donerx</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut1/rxdata" type="array">
+         <obj_property name="ElementShortName">rxdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rxdata[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group84" type="group">
+      <obj_property name="label">DUT2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb2_uart/dut2/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut2/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut2/rx" type="logic">
+         <obj_property name="ElementShortName">rx</obj_property>
+         <obj_property name="ObjectShortName">rx</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut2/tx" type="logic">
+         <obj_property name="ElementShortName">tx</obj_property>
+         <obj_property name="ObjectShortName">tx</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut2/newd" type="logic">
+         <obj_property name="ElementShortName">newd</obj_property>
+         <obj_property name="ObjectShortName">newd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut2/tx_data" type="array">
+         <obj_property name="ElementShortName">tx_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut2/done_tx" type="logic">
+         <obj_property name="ElementShortName">done_tx</obj_property>
+         <obj_property name="ObjectShortName">done_tx</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut2/donerx" type="logic">
+         <obj_property name="ElementShortName">donerx</obj_property>
+         <obj_property name="ObjectShortName">donerx</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb2_uart/dut2/rxdata" type="array">
+         <obj_property name="ElementShortName">rxdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rxdata[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Communication.srcs/sources_1/new/device.v" \
+"../../../../Communication.srcs/sources_1/new/uart_rx.v" \
+"../../../../Communication.srcs/sources_1/new/uart_tx.v" \
+"../../../../Communication.srcs/sim_1/new/tb2_uart.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

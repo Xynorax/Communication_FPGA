@@ -1,0 +1,10 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sim_1/new/tb2_uart.v,1773699144,verilog,,,,tb2_uart,,,,,,,,
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/device.v,1773692774,verilog,,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_rx.v,,device,,,,,,,,
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/tb_uart.v,1773690230,verilog,,,,tb_uart,,,,,,,,
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_rx.v,1773696113,verilog,,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_tx.v,,uart_rx,,,,,,,,
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_tx.v,1773696912,verilog,,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sim_1/new/tb2_uart.v,,uart_tx,,,,,,,,
