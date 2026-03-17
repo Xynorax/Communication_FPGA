@@ -1,24 +1,16 @@
-`timescale 1ns / 1ps
-
-module uart_rx#(parameter clk_freq = 1000000, parameter baud_rate=9600)(
+module uart_rx_top (
     input clk, rst, baud_pulse, rx, 
     input sticky_parity, eps, pen,
     input [1:0] wls,
     output reg push,
     output reg pe, fe, bi,
     output reg [7:0] dout
-    );
-    localparam clk_bit_count = (clk_freq/baud_rate);
-    integer clk_count = 0;
-    integer counts = 0;
-    reg uclk = 0;
-    reg [1:0] state = 0;
-    
-    localparam IDLE = 3'd0;
-    localparam START = 3'd1;
-    localparam READ = 3'd2;
-    localparam PARITY = 3'd3;
-    localparam STOP = 3'd4;
+);
+
+    typedef enum logic [2:0] {IDLE = 3'd0, START = 3'd1, READ = 3'd2, PARITY = 3'd3, STOP = 3'd4} state_type;
+    state_type state;
+
+    // --- Synchronization & Edge Detection ---
     reg rx_sync_0, rx_sync_1; // Double flop to prevent metastability
     reg rx_prev;
     wire falling_edge;
@@ -30,14 +22,18 @@ module uart_rx#(parameter clk_freq = 1000000, parameter baud_rate=9600)(
     end
     assign falling_edge = (rx_prev == 1'b1 && rx_sync_1 == 1'b0);
 
-    // Internal Registers
+    // --- Internal Registers ---
     reg [3:0] count;
     reg [2:0] bitcnt;
     reg [7:0] shift_reg;
-    // Number of bits to read depends on WLS
+    
+    // Calculate total bits to read based on WLS (Word Length Select)
+    // 2'b00=5 bits, 2'b01=6 bits, 2'b10=7 bits, 2'b11=8 bits
     wire [2:0] max_bits = (wls == 2'b00) ? 3'd4 : 
                           (wls == 2'b01) ? 3'd5 : 
                           (wls == 2'b10) ? 3'd6 : 3'd7;
+
+    
 
     always @(posedge clk or posedge rst) begin
         if (rst) begin

@@ -3,8 +3,11 @@
 May 22 2024
 19:03:11
 D:/Youssef/Projects/Communication_FPGA/Communication/Communication.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
-D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sim_1/new/tb2_uart.v,1773699144,verilog,,,,tb2_uart,,,,,,,,
-D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/device.v,1773692774,verilog,,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_rx.v,,device,,,,,,,,
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sim_1/new/tb2_uart.v,1773771420,verilog,,,,tb2_uart,,,../../../../Communication.srcs/sources_1/new,,,,,
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/driver.v,1773775586,verilog,,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/fifo.v,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_defs.vh,driver,,,../../../../Communication.srcs/sources_1/new,,,,,
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/fifo.v,1773749391,verilog,,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_regs.v,,fifo,,,../../../../Communication.srcs/sources_1/new,,,,,
 D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/tb_uart.v,1773690230,verilog,,,,tb_uart,,,,,,,,
-D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_rx.v,1773696113,verilog,,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_tx.v,,uart_rx,,,,,,,,
-D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_tx.v,1773696912,verilog,,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sim_1/new/tb2_uart.v,,uart_tx,,,,,,,,
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_defs.vh,1773774455,verilog,,,,,,,,,,,,
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_regs.v,1773774164,verilog,,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_rx.v,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_defs.vh,uart_regs,,,../../../../Communication.srcs/sources_1/new,,,,,
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_rx.v,1773763289,verilog,,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_tx.v,,uart_rx,,,../../../../Communication.srcs/sources_1/new,,,,,
+D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sources_1/new/uart_tx.v,1773763267,verilog,,D:/Youssef/Projects/Communication_FPGA/Communication/Communication.srcs/sim_1/new/tb2_uart.v,,uart_tx,,,../../../../Communication.srcs/sources_1/new,,,,,

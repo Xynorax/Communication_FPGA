@@ -13,31 +13,61 @@ module tb2_uart;
     integer i;
     integer j;
     wire tx1, tx2;
-    device #(clk_freq,baud_rate) dut1(.clk(clk), .rst(rst), .tx(tx1), .rx(tx2));
-    device #(clk2_freq,baud_rate) dut2(.clk(clk2), .rst(rst), .tx(tx2), .rx(tx1));
-    
+    reg rd1,rd2, wr1, wr2;
+    reg [7:0] din1, din2;
+    reg [2:0] addr1, addr2;
+    driver #(clk_freq,baud_rate) dut1  (clk, rst, wr1, rd1,tx1,addr1, din1, tx2, dout);
+    driver #(clk2_freq,baud_rate) dut2 (clk, rst, wr2, rd2,tx2,addr2, din2, tx1, dout);
     always #(clk_period/2.0) clk = ~clk;
     always #(clk2_period/2.0) clk2 = ~clk2;
-    
+    initial begin
+        rst = 0;
+        clk = 0;
+        wr1 = 0;
+        rd1 = 0;
+        addr1 = 0;
+        din1 = 0;
+    end
     initial begin
         #1000000
         rst <= 1;
         #2000000
         rst <= 0;
         #1000000
-        dut1.newd <= 1;
-        for(i= 0; i<20; i=i+1) begin
-            dut1.tx_data = $urandom();
-            @(posedge dut1.done_tx);
-        end
-        dut1.newd <= 0;
-        dut2.newd <= 1;
-        for(i= 0; i<20; i=i+1) begin
-            dut2.tx_data = $urandom();
-            @(posedge dut2.done_tx);
-        end
-        dut2.newd <= 0;
+        // set dlab to 1
+        @(negedge clk);
+        wr1   <= 1;
+        addr1 = 3'h3;
+        din1  = 8'b1000_0000;
+         
+        // Set the Divisor = 0x0108
+        @(negedge clk);
+        addr1 = 3'h0;
+        din1  = 8'b0000_1000;
+         
+        @(negedge clk);
+        addr1 = 3'h1;
+        din1  = 8'b0000_0001;
+        @(negedge clk);
+        addr1 = 3'h3;
+        din1  = 8'b0000_1100;
+        
+        ///// dlab = 0, wls = 00(5-bits), stb = 1 (single bit dur), pen = 1, eps =0(odd), sp = 0
+        @(negedge clk);
+        addr1 = 3'h3;
+        din1  = 8'b0000_1100;
+
+        // Write to FIFO
+        @(negedge clk);
+        addr1 = 3'h0;
+        din1  = 8'b1111_0000;///10000 -> parity = 0, 
+        
+        // Remove wr
+        @(negedge clk);
+        wr1 = 0;
+        @(posedge dut1.uart_tx_inst.sreg_empty);
+        repeat(48) @(posedge dut1.uart_tx_inst.baud_pulse);
         $display("Test completed");
-        $finish;
+        $stop;
     end
 endmodule
