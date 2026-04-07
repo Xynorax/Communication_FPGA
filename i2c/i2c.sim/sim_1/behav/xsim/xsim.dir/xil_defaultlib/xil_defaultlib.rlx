@@ -1,0 +1,9 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+D:/Youssef/Projects/Communication_FPGA/i2c/i2c.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sim_1/new/tb_i2c.v,1775565958,verilog,,,,tb_i2c,,,,,,,,
+D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sources_1/new/i2c_master.v,1775566424,verilog,,D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sources_1/new/i2c_slave.v,,i2c_master,,,,,,,,
+D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sources_1/new/i2c_master_regs.v,1775497050,verilog,,D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sources_1/new/i2c_slave.v,,i2c_master_regs,,,,,,,,
+D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sources_1/new/i2c_slave.v,1775566274,verilog,,D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sim_1/new/tb_i2c.v,,i2c_slave,,,,,,,,
