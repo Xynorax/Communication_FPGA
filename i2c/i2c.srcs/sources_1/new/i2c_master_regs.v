@@ -34,7 +34,7 @@ always@(posedge clk, posedge rst) begin
         if(wr_en)
             registers[addr] <= wdata;
         else if (start)
-            start <= 0;
+            registers[0][0] <= 0;
             
         if(rd_en)
             rdata <= registers[addr];
