@@ -1,6 +1,15 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sources_1/new/i2c_master.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module i2c_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sources_1/new/i2c_master_driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_master_driver
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sources_1/new/i2c_master_regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_master_regs
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sources_1/new/i2c_slave.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module i2c_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sources_1/new/i2c_slave_driver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave_driver
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'done' is not allowed [D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sources_1/new/i2c_slave_driver.v:21]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sources_1/new/i2c_slave_regs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2c_slave_regs
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Youssef/Projects/Communication_FPGA/i2c/i2c.srcs/sim_1/new/tb_i2c.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_i2c

@@ -6,10 +6,12 @@ module i2c_slave(
     inout sda,             
     input scl,             
     input [6:0] slave_addr, 
+    output reg busy,
     output reg [7:0] data_out,
     output reg data_ready,
     output reg sda_ctrl,
     output reg done 
+    
 );
 
 
@@ -29,6 +31,7 @@ reg sda_prev = 0, scl_prev = 0;
 wire start_cond = (sda_prev == 1 && sda == 0 && scl == 1);
 wire stop_cond  = (sda_prev == 0 && sda == 1 && scl == 1);
 assign sda = 1'bz;
+reg rw;
 
 // Next state logic
 always@(posedge clk or posedge rst) begin
@@ -118,25 +121,34 @@ always@(*) begin
             scl_prev <= 1;
             sda_prev <= 1;
             done <= 0;
+            rw <= 0;
+            busy <= 0;
         end
         ADDR: begin
             shift_reg[bit_cnt] <= sda;
+            busy <= 1;
         end
         ADDR_ACK: begin
+            busy <= 1;
             if(shift_reg[7:1] == slave_addr) begin
                 sda_ctrl <= 1;
             end 
         end
         RECEIVE: begin
+            busy <= 1;
             sda_ctrl <= 0;
             shift_reg[bit_cnt] <= sda;
         end
         DATA_ACK: begin
+            busy <= 1;
             sda_ctrl <= 1;
             data_out <= shift_reg;
+            data_ready <= 1;
         end
         STOP_DETECT: begin
+            busy <= 1;
             sda_ctrl <= 0;
+            data_ready <= 0;
             done <= 1;
         end
     endcase 
